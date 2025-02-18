@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Productos</title>
+</head>
+<body>
+    <!-- Menú principal -->
+    <% include ../views/menu.ejs %>
+
+    <div class="container mt-5">
+        <h2>Productos</h2>
+        <form action="/productos/add" method="POST">
+            <input type="text" name="codigo" placeholder="Código" required />
+            <input type="text" name="producto" placeholder="Producto" required />
+            <input type="number" name="categoria_id" placeholder="ID Categoría" required />
+            <input type="number" name="existencia_actual" placeholder="Existencia Actual" required />
+            <input type="number" name="precio" placeholder="Precio" step="0.01" required />
+            <button type="submit">Agregar Producto</button>
+        </form>
+
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Categoria ID</th>
+                    <th>Existencia Actual</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.id %></td>
+                        <td><%= producto.codigo %></td>
+                        <td><%= producto.producto %></td>
+                        <td><%= producto.categoria_id %></td>
+                        <td><%= producto.existencia_actual %></td>
+                        <td><%= producto.precio %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
