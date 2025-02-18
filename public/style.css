@@ -1,0 +1,98 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo del encabezado */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo principal */
+main {
+    padding: 20px;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1em;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #e67e22; /* Color para el precio */
+}
+
+/* Estilo del pie de página */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    .product-card {
+        margin-bottom: 15px; /* Espaciado en pantallas pequeñas */
+        padding: 10px; /* Ajustar el padding en pantallas pequeñas */
+    }
+
+    nav a {
+        margin: 0 10px; /* Espaciado en pantallas pequeñas */
+    }
+}
